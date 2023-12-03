@@ -1,4 +1,5 @@
 *.env
 *.git
-.vscode
+*.gitignore
+.vscode/
 .DS_STORE
