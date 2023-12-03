@@ -1,0 +1,19 @@
+// 기본 import
+import java.util.*;
+import java.io.*;
+import java.util.Map;
+import java.util.HashMap;
+
+// 기본 클래스
+public class test {
+    public static void main(String[] args) {
+
+    }
+}
+
+// 컴파일 및 실행
+javac [컴파일 할 파일 이름]
+java [파일 이름]
+
+// 바이트코드 보기(디스어셈블리)
+javap -c test.class
