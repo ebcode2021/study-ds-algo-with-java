@@ -17,3 +17,5 @@ java [파일 이름]
 
 // 바이트코드 보기(디스어셈블리)
 javap -c test.class
+
+// 파일-mine 붙으면 내풀이
