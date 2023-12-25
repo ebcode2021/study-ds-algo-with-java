@@ -1,7 +1,4 @@
 import java.util.*;
-import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 
 /*
  * lambda vs 메소드 참조
@@ -20,8 +17,6 @@ public class streamApiCompare {
                 .map(Math::round)
                 .forEach(System.out::println);
     }
-    
-
 }
 
 
