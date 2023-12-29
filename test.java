@@ -1,36 +1,33 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
+/* 두 번째 풀이(배열 사용) */
 public class test {
-	public String[] reorderLogFiles(String[] logs) {
-		List<String> letterList = new ArrayList<>();
-		List<String> digitList = new ArrayList<>();
+	public static String[] subjectCode = {"A+", "A0","B+", "B0","C+", "C0","D+", "D0","F", "P"};
+	public static double [] scores = {4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.0, 0.0};
 
-		for (String log : logs) {
-			if (Character.isDigit(log.split(" ")[1].charAt(0))) {
-				digitList.add(log);
-			} else {
-				letterList.add(log);
-			}
-		}
-
-		letterList.sort((s1, s2) -> {
-			String[] s1x = s1.split(" ", 2);
-			String[] s2x = s2.split(" ", 2);
-
-			int compared = s1x[1].compareTo(s2x[1]);
-			if (compared == 0) {
-				return s1x[0].compareTo(s2x[0]);
-			} else {
-				return compared;
-			}
-		});
-
-		letterList.addAll(digitList);
-
-		return letterList.toArray(new String[0]);
+	public static double getScoreBySubjectCode(String code) {
+		int index = Arrays.asList(subjectCode).indexOf(code);
+		return scores[index];
 	}
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String code; 
+		double score;
+		double totalScore = 0;
+		double totalSum = 0;
 
-	public static void main(String[] args) {
+		for (int i = 0; i < 20; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			st.nextToken(); //useless data
+			score = Double.parseDouble(st.nextToken());
+			code = st.nextToken();
+			if (code.equals("P"))
+				continue;
+			totalSum += score * getScoreBySubjectCode(code);
+			totalScore += score;
+		}
+		System.out.printf("%.6f\n", totalSum / totalScore);
+		br.close();
 	}
 }
