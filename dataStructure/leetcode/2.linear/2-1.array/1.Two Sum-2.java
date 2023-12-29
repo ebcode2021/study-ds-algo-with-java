@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.*;
 
-/* 1.HashMap 풀이. O(n) */
+/* 2.HashMap 풀이. O(n) */
 class Solution {
      public int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> numsMap = new HashMap<>();
