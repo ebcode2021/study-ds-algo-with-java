@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.*;
-
 /* 1.Brute Force 풀이. O(n^2) */
 class Solution {
      public int[] twoSum(int[] nums, int target) {
