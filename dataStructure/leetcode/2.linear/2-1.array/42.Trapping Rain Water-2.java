@@ -21,8 +21,9 @@ public class Solution {
 				// 물이 쌓이는 양은 거리와 물 높이의 곱
 				volume += distance * waters;
 			}
+			// 진행하면서 현재 위치를 스택에 삽입
 			stack.push(i);
 		}
 		return volume;
-	}	 
+	}
 }
