@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+class Main {
 	public static void main(String[] args) throws Exception {
 		int baskets;
 		int balls;
@@ -38,7 +38,7 @@ public class Main {
 	}
 }
 
-public class Main2 {
+class Main2 {
 
 	public static void main(String[] args) {
 
