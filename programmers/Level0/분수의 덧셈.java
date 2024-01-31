@@ -1,9 +1,9 @@
 class Solution {
     static int dividedValue(int numer, int denom) {   
         int len = numer < denom ? numer : denom;
-         for (int i = len; len >= 2; len--) {
-            if (denom % len == 0 && numer % len == 0) {
-                return len;
+         for (int i = len; i >= 2; i--) {
+            if (denom % i == 0 && numer % i == 0) {
+                return i;
             }
         }
         return 0;
@@ -15,10 +15,10 @@ class Solution {
         int numer = numer1 * denom2 + numer2 * denom1;
 
         int value = dividedValue(denom, numer);
-        while (value != 0) {
+		
+        if (value != 0) {
             denom /= value;
             numer /= value;
-            value = dividedValue(denom, numer);
         }
         int[] res = {numer, denom};
         return res;
