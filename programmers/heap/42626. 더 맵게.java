@@ -24,6 +24,16 @@ class Solution {
 				}
 			}
 		}
+
+		/** 다른 while문 */
+		//int answer = 1;
+		//while (pq.size() >= 2) {
+		//	pq.add(pq.poll() + (pq.poll() * 2));
+		//	if (pq.peek() >= K)
+		//		return answer;
+		//	answer++;
+		//}
+		//return -1;
 		return repeat;
 	}
 
