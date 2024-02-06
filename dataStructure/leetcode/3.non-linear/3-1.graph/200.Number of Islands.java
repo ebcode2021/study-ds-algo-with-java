@@ -23,7 +23,7 @@ class Solution {
 		int count = 0;
 
 		for (int i = 0; i < grid.length; i++) {
-			for (int j = 0; j < grid[i].length; i++) {
+			for (int j = 0; j < grid[i].length; j++) {
 				// 만약 육지가 [1]인 경우 DFS
 				if (grid[i][j] == '1') {
 					dfs(i, j, grid);
