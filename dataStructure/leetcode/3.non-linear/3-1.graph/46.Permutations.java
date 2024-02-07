@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
 class Solution {
 
 	public void dfs(List<List<Integer>> results, List<Integer> prevElements, List<Integer> elements) {
-		// leaf node에 도달하면 결과에 추가
+		// leaf node에 도달하면 결과에 추가(복사분 생성하여 저장)
 		if (elements.isEmpty()) {
 			results.add(prevElements.stream().collect(Collectors.toList()));
 		}
