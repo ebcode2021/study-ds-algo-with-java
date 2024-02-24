@@ -2,30 +2,40 @@ import java.io.*;
 import java.util.*;
 
 class Main {
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int[][] whitePaper = new int[100][100];
-	
-		int count = Integer.parseInt(br.readLine());
+		int N = Integer.parseInt(br.readLine());
+		int breakCnt = Integer.parseInt(br.readLine());
 
-		int area = 0;
-		while (count-- > 0) {
-			int[] data = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-			int x = data[0];
-			int y = data[1];
-			
-			for (int i = x; i < x + 10; i++) {
-				for (int j = y; j < y + 10; j++) {
-					if (whitePaper[i][j] == 0) {
-						whitePaper[i][j] = 1;
-						area++;
-					}
-				}
+		boolean[] broken = new boolean[10];
+		if (breakCnt > 0) {
+			int[] brokenArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+			for (int i = 0; i < breakCnt; i++) {
+				broken[brokenArr[i]] = true;
 			}
 		}
-		
-		System.out.println(area);
+
+		int result = Math.abs(N - 100);
+
+		for (int i = 0; i < 1000000; i++) {
+			String current = String.valueOf(i);
+			int len = current.length();
+
+			boolean isBreak = false;
+			for (int j = 0; j < len; j++) {
+				if (broken[current.charAt(j) - '0']) {
+					isBreak = true;
+					break ;
+				}
+			}
+
+			if (!isBreak) {
+				int min = Math.abs(N - i) + len;
+				result = Math.min(min, result);
+			}
+		}
+
+		System.out.println(result);
 	}
 }
