@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 class Main {
-	static int min = Integer.MAX_VALUE;
+	static int min = 101;
 	static int minPerson = 0;
 	static int N;
 	static boolean visited[];
