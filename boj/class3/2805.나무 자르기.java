@@ -11,8 +11,6 @@ import java.util.*;
  * 
  */
 class Main {
-	static int min = 2000000000;
-	static int max = 0;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -26,6 +24,7 @@ class Main {
 
 		int min = 0;
 		int max = 0;
+		
 		for (int i = 0; i < N; i++) {
 			trees[i] = data[i];
 			if (max < trees[i]) {
