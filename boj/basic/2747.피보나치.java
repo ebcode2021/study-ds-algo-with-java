@@ -6,7 +6,7 @@ class Main {
 
 		int n = Integer.parseInt(br.readLine());
 
-		int[] fibo = new int[45];
+		int[] fibo = new int[46];
 		fibo[0] = 0;
 		fibo[1] = 1;
 		
