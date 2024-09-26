@@ -23,9 +23,11 @@ class Main {
 		int currentB = b;
 
 		while (true) {
+
 			if (currentA == currentB) {
 				return currentA;
 			}
+
 			if (currentA < currentB) {
 				currentA = a * increaseA++;
 			} else {
