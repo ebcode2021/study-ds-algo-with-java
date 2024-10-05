@@ -4,7 +4,8 @@ import java.util.*;
 class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
+		//BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
 
 		Deque<Integer> stack = new ArrayDeque<>();
@@ -15,20 +16,19 @@ class Main {
 			if (num > lastValue) {
 				for (int j = lastValue + 1; j <= num; j++) {
 					stack.push(j);
-					bw.write("+\n");
+					sb.append("+\n");
 				}
 				lastValue = num;
 			} else {
 				if (stack.peek() != num) {
-					bw.write("NO");
-					break;
+					System.out.println("NO");
+					return;
 				}
 			}
 			stack.pop();
-			bw.write("-\n");
+			sb.append("-\n");
 		}
-		bw.flush();
-		bw.close();
+		System.out.print(sb);
 		br.close();
 	}
 }
