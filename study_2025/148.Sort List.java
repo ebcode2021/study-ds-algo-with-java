@@ -18,7 +18,7 @@ class Solution {
 	 */
 	public static ListNode sortList(ListNode head) {
 		if (head == null) {
-			return null;
+			return head;
 		}
 
 		ListNode frontNode = head;
