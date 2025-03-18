@@ -77,6 +77,7 @@ class Solution2 {
  * Solve 3 : O(nlogn)
  * Try : 1
  * Result : Runtime(8ms, Beats 86.84%), Memory(46.45MB, Beats : 83.63%)
+ * url : https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-double:A-
  */
 class Solution3 {
     public int[][] merge(int[][] intervals) {
