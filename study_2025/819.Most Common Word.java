@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Solve 1 : O(n)
  * Wrong Cnt : 1
- * Result : Runtime(4ms, Beats 74.37%), Memory(44.62MB, Beats : 87.79%)
+ * Result : Runtime(14ms, Beats 70.50%), Memory(42.62MB, Beats : 94.20%)
  */
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
